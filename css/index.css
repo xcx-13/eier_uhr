@@ -1,0 +1,209 @@
+body{
+  background-color: cadetblue;
+  height: 97vh;
+  overflow: hidden;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+}
+
+.position{
+  margin-top: 15%;
+}
+
+/* Menu Icon */
+/*_____________________________________________________________________________________________________________*/
+ .container {
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+}
+
+/* SideNav */
+/*_____________________________________________________________________________________________________________*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* Egg Image */
+/*_____________________________________________________________________________________________________________*/
+
+
+div img{
+  width: 70%;
+}
+
+/* Egg Image (Wiggle)*/
+/*_____________________________________________________________________________________________________________*/
+
+
+
+/* timer */
+/*_____________________________________________________________________________________________________________*/
+.font{
+  font-size: 250%;
+  color: white;
+  font-weight: 700;
+}
+
+
+/* Start Button */
+/*_____________________________________________________________________________________________________________*/
+div button{
+  width: 40%;
+  height: 520%;
+}
+
+
+/* Eier Tabelle */
+/*_____________________________________________________________________________________________________________*/
+table {
+  width: 95%;
+}
+
+td, th {
+  border: 1px solid #dddddd3d;
+  text-align: center;
+  padding: 10px;
+  font-size: large;
+  font-weight: 750;
+}
+
+.blue{
+  color: rgb(95, 158, 160);
+}
+
+.light{
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddde0;
+}
+
+/* Eier Tabelle Img*/
+#time{
+  width: 50%;
+}
+
+/*_____________________________________________________________________________________________________________*/
+
+.picker {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 3ch;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.picker::before,
+.picker::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  background: linear-gradient(
+    cadetblue, 
+    cadetblue
+  );
+  /*   backdrop-filter: blur(1px); */
+  width: 100%;
+  height: calc(50% - 3.5ex);
+  pointer-events: none;
+}
+
+.picker::after {
+  top: auto;
+  bottom: 0;
+  background: linear-gradient(
+    cadetblue, 
+    cadetblue
+  ); 
+}
+
+.picker > * {
+  display: grid;
+  grid-auto-rows: 15vmin;
+  align-items: center;
+  max-block-size: calc(9vmin * 5);
+  overflow-y: auto;
+  overscroll-behavior-y:contain;
+  scroll-snap-type: y mandatory;
+  padding-inline-end: 0ch;
+  font-size: 10vmin;
+  font-weight: lighter;
+  color: hsl(0 0% 20%);
+}
+
+.picker > [title]::before {
+  content: attr(title);
+  position: sticky;
+  top: 0;
+  align-self: start;
+  color: hsl(0, 0%, 100%, 0.66);
+  z-index: 0;
+  font-size: min(.7em, 50%);
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 1px 1px hsl(0, 0%, 100%, 0.66);
+}
+
+.picker > [title]:first-child::before {
+  text-align: end;
+}
+
+.picker > * > * {
+  scroll-snap-align: center;
+}
+
+time {
+  text-align: center;
+}
+
+time {
+  color: hsl(200 20% 80%);
+}
